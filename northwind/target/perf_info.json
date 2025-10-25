@@ -5,8 +5,8 @@
     "static_analysis_parsed_path_count": 0,
     "is_partial_parse_enabled": true,
     "is_static_analysis_enabled": true,
-    "read_files_elapsed": 0.014730737078934908,
-    "load_all_elapsed": 0.0824633811134845,
+    "read_files_elapsed": 0.015186237171292305,
+    "load_all_elapsed": 0.08241682802326977,
     "projects": [
         {
             "project_name": "my_new_project",
