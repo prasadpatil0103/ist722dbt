@@ -5,8 +5,8 @@
     "static_analysis_parsed_path_count": 0,
     "is_partial_parse_enabled": true,
     "is_static_analysis_enabled": true,
-    "read_files_elapsed": 0.02077044197358191,
-    "load_all_elapsed": 0.10413774405606091,
+    "read_files_elapsed": 0.02050821401644498,
+    "load_all_elapsed": 0.1022445730632171,
     "projects": [
         {
             "project_name": "northwind",
