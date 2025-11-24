@@ -1,0 +1,51 @@
+version: 2
+
+models:
+  - name: fact_patient_treatment
+    description: "Patient treatment transaction fact table"
+    columns:
+      - name: treatment_fact_key
+        description: "Primary key"
+        tests:
+          - unique
+          - not_null
+      - name: patient_id
+        description: "FK to dim_patient"
+        tests:
+          - not_null
+      - name: cost
+        description: "Treatment cost"
+        tests:
+          - not_null
+          
+  - name: fact_treatment_cost
+    description: "Treatment cost transaction fact"
+    columns:
+      - name: cost_fact_key
+        description: "Primary key"
+        tests:
+          - unique
+          - not_null
+      - name: treatment_cost
+        description: "Cost amount"
+        tests:
+          - not_null
+
+  - name: fact_employee_performance
+    description: "Employee performance snapshot"
+    columns:
+      - name: performance_fact_key
+        tests:
+          - unique
+          - not_null
+      - name: emp_id
+        tests:
+          - not_null
+      - name: monthly_salary
+        tests:
+          - not_null
+      - name: performance_rating
+        tests:
+          - not_null
+          - accepted_values:
+              values: [1, 2, 3, 4, 5]
