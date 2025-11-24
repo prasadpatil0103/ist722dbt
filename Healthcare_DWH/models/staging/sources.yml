@@ -1,0 +1,29 @@
+version: 2
+
+sources:
+  - name: raw
+    database: HOSPITAL_DATABASE
+    schema: WORKFORCE_STAFFING
+    tables:
+      # Dimensions
+      - name: dim_date
+        description: "Date dimension 2021-2025"
+        
+      - name: dim_patient
+        description: "Patient master data"
+        
+      - name: dim_employee
+        description: "Employee master data"
+        
+      - name: dim_treatment_type
+        description: "Treatment type master data"
+        
+      - name: dim_unit
+        description: "Hospital unit master data"
+      
+      # Staging tables
+      - name: stg_hospital_data_analysis
+        description: "Patient treatment raw data"
+        
+      - name: stg_treatment
+        description: "Treatment transaction raw data"
