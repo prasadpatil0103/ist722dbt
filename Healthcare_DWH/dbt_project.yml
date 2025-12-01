@@ -46,4 +46,9 @@ models:
     marts:
       facts:
         +materialized: table
-        +schema: facts
+        database: HOSPITAL_DATABASE
+        +schema: WORKFORCE_STAFFING
+      dimensions:
+        +materialized: table
+        database: HOSPITAL_DATABASE
+        +schema: WORKFORCE_STAFFING

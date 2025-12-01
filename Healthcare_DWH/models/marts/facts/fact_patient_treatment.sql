@@ -32,4 +32,4 @@ SELECT
     s.loaded_at
 FROM staging s
 LEFT JOIN patients p ON s.patient_id = p.patient_id
-LEFT JOIN treatment_types t ON s.procedure_name = t.treatment_type
+Right JOIN treatment_types t ON s.procedure_name = t.treatment_type
