@@ -19,7 +19,7 @@ SELECT
     s.patient_id,
     t.treatment_type_key,
     s.condition,
-    s.procedure_name,
+    s.procedure_name,  -- Keep original (might be combined)
     s.outcome,
     s.gender,
     s.cost,
@@ -32,4 +32,5 @@ SELECT
     s.loaded_at
 FROM staging s
 LEFT JOIN patients p ON s.patient_id = p.patient_id
-Right JOIN treatment_types t ON s.procedure_name = t.treatment_type
+LEFT JOIN treatment_types t 
+    ON TRIM(t.treatment_type) = TRIM(SPLIT_PART(s.procedure_name, ' and ', 1))
